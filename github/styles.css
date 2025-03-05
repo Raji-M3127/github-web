@@ -90,6 +90,10 @@
     display: flex;
     background-color: transparent;
 }
+.headernav1{
+    height: 40px;
+    width:1407px ;
+}
 
 .header-log button {
     cursor: pointer;
@@ -118,8 +122,6 @@ svg line {
     margin-left: 16px;
 }
 .header-signin{
-padding: auto;
 }
 .heeader-signup{
-padding: 0;
 }
