@@ -118,8 +118,8 @@ svg line {
     margin-left: 16px;
 }
 .header-signin{
-
+padding: auto;
 }
 .heeader-signup{
-    
+padding: 0;
 }
