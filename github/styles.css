@@ -118,11 +118,51 @@ svg line {
     color-scheme: light;
     fill: currentColor;
 }
-.header2{
-    margin-left: 16px;
+.container-search{
+    height: 40px;
+    width: 795px;
+    display: flex;
+    flex-direction: row;
+    margin-left : 16px;
+    margin-top : 0px;
+    overflow-wrap : break-word;
+    cursor: pointer;
+    text-align : left;
+    text-size-adjust : 100%;
+    color: rgba(255, 255, 255);
 }
+.header-search-btn{
+    height: 32px;
+    width: 320px;
+    align-items : center;
+    background-color : rgba(46, 55, 74, 0.82);
+    border: 1px solid rgb(129, 139, 152);
+    border-radius: 6px;
+    box-sizing : border-box;
+    display : flex;
+    margin-right : 0px;
+    position : static;
+    text-align : left;
+}
+.header-search-btn button{
+    height: 30px;
+    width: 310px;
+    padding-left:8px ;
+    align-items: center;
+    background-color : rgba(46, 55, 74, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-search-btn button svg{
+    height: 16px;
+    width: 16px;
+    color : rgb(89, 99, 110);
+    display : block;
+}
+
+
 .header-signin{
-    position: relative;
 }
 .heeader-signup{
 }
