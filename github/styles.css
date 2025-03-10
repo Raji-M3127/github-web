@@ -158,6 +158,7 @@ svg line {
     height: 20px !important;
     width: 20px !important;
     margin-left: 8px;
+    color: transparent;
 }
 .header-search-btn button span{
     text-align: left;
