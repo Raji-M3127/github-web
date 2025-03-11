@@ -171,7 +171,45 @@ svg line {
     justify-content: center; */
 }
 
-.header-signin{
+.signin{
+    height: 32px !important;
+    width: 78px !important;
+    color:#FFFFFF;
+    background-color: transparent;
+    margin-left:12px ;
+    padding-left: 12px 42px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
 }
-.heeader-signup{
+.signin span{
+    width: 66px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+.signup{
+    height: 32px !important;
+    width: 78px !important;
+    color:#FFFFFF;
+    background-color: transparent;
+    margin-left:12px ;
+    padding-left: 12px 42px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.signup button{
+    width: 66px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(46, 55, 74, 0.82);
+    border: 1px solid rgb(129, 139, 152);
+    border-radius: 3px;
+    padding: 3px;
+}
+
