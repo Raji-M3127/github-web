@@ -259,20 +259,40 @@ svg line {
 }
 .form{
     position: relative;
-    height: 56px !important;
-    width: 695px;
+    height: 88px !important;
+    width: 695px !important;
     position: relative;
     margin-top:32px ;
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
     justify-content: center;
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: flex-end;
     color: rgb(240, 246, 252);
-    
-}
-.form form{
-    height:55px ;
-    width: 474px;
     background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
 }
+/* .form input{
+    height:28px ;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 18px 12px 0px 18px;
+    border: none;
+    display: flex;
+    text-align: start;
+}
+.form button{
+    height: 34px;
+    width: 144px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 0.8px;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 8px;
+    cursor: pointer;
+    
+} */
+
 
 
