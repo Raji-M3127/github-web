@@ -213,12 +213,16 @@ svg line {
     padding: 3px;
 }
 .hero{
-    height: 950px;
-    width: 1392px;
+    margin-top: 65px;
+    height: 288px;
+    width: 1472px;
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     padding: 0px 24px;
+    position: fixed;
 }
 .hero-module{
     height: 288px;
@@ -258,8 +262,7 @@ svg line {
     padding: 28px 60px;
 }
 .form{
-    position: relative;
-    height: 88px !important;
+    height: 56px !important;
     width: 695px !important;
     position: relative;
     margin-top:32px ;
@@ -272,8 +275,13 @@ svg line {
     color: rgb(240, 246, 252);
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
+    box-sizing: border-box;
+    column-gap : 16px;
+    flex-wrap : wrap;
 }
-/* .form input{
+
+.form input{
+    position: relative;
     height:28px ;
     width: 230px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -283,6 +291,7 @@ svg line {
     text-align: start;
 }
 .form button{
+    position: relative;
     height: 34px;
     width: 144px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -292,7 +301,7 @@ svg line {
     margin-left: 8px;
     cursor: pointer;
     
-} */
+}
 
 
 
