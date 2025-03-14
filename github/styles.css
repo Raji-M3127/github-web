@@ -263,11 +263,10 @@ svg line {
 }
 .frm{
     height: 56px !important;
-    width: 695px !important;
+    width: 750px !important;
     position: relative;
-    margin-top:32px ;
+    margin-top:5px ;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     column-gap: 16px;
     row-gap: 16px;
@@ -330,10 +329,9 @@ svg line {
     height: 53px !important;
     width: 198px;
     display: flex;
-    align-items:rig
-     ;
+    align-items:center;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: transparent;
     border: 2px solid rgb(220, 227, 235);
     border-radius: 8px;
