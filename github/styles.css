@@ -261,7 +261,7 @@ svg line {
     justify-content:center;
     padding: 28px 60px;
 }
-.form{
+.frm{
     height: 56px !important;
     width: 695px !important;
     position: relative;
@@ -271,16 +271,34 @@ svg line {
     justify-content: center;
     column-gap: 16px;
     row-gap: 16px;
-    align-items: center;
+    align-items: flex-start;
     color: rgb(240, 246, 252);
-    background-color: rgba(255, 255, 255, 0.75);
+    
+}
+.frmcontainer{
+    height: 48px;
+    width: 466px;
+    display: flex;
+    align-items:center ;
+    justify-content: flex-start;
+    background-color: rgb(240, 246, 252);
     border-radius: 8px;
     box-sizing: border-box;
-    column-gap : 16px;
-    flex-wrap : wrap;
+    padding: 1px 5px;
 }
-    height:28px ;
+.frmcontainer input{
+    height:28px !important;
     width: 230px;
+    align-items: start;
+    margin-right: 10px;
+    padding-left: 20px;
+    border: none;
+    background-color: rgb(240, 246, 252);
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 18px;
+}
+
+    
     height: 34px;
     width: 144px;
 .
