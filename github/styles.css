@@ -267,11 +267,11 @@ svg line {
     position: relative;
     margin-top:32px ;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     column-gap: 16px;
     row-gap: 16px;
-    align-items: flex-end;
+    align-items: center;
     color: rgb(240, 246, 252);
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
@@ -279,29 +279,10 @@ svg line {
     column-gap : 16px;
     flex-wrap : wrap;
 }
-
-.form input{
-    position: relative;
     height:28px ;
     width: 230px;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 18px 12px 0px 18px;
-    border: none;
-    display: flex;
-    text-align: start;
-}
-.form button{
-    position: relative;
     height: 34px;
     width: 144px;
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 0.8px;
-    border-radius: 5px;
-    display: flex;
-    margin-left: 8px;
-    cursor: pointer;
-    
-}
-
+.
 
 
