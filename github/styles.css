@@ -16,12 +16,19 @@
     height: 29.5px;
     width: 1520px;
     line-height: 17.5px;
-    overflow-wrap: break-word;
-    /* z-index: 36; */
+    text-wrap: wrap;
+    
+}
+.banner::after{
+    position: fixed !important;
+    top: 0; 
+    left: 0;
+
 }
 
 .banner a {
     color: #FFFFFF;
+    position: relative;
 }
 
 .container-main {
@@ -58,7 +65,7 @@
 
 .container-main-nav::after {
     background-color: rgb(13, 17, 23);
-    color-scheme: light;
+    /* color-scheme: light;
     display: block;
     align-items: center;
     height: 72px;
@@ -75,7 +82,7 @@
     padding-left: 32px;
     position: absolute;
     opacity: 1;
-    flex-direction: row;
+    flex-direction: row; */
 }
 
 .header-log {
