@@ -370,7 +370,23 @@ svg line {
     cursor: pointer;
 }
 .copbutton button:hover{
-    background-color: rgba(184, 173, 196, 0.2);
+    background-color: rgba(30, 10, 52, 0.2);
 }
+/* .vid-content{
+    height:900px;
+    width: 1640px;
+} */
+.hero-courosal-control{
+    background-color: #090c10;
+    background-image: linear-gradient(to top,rgb(13, 11, 30),rgb(26, 24, 56) )!important;
+    height:250px ;
+    width: 1580px ;
+    padding: 30px  35px;
+    position: relative;
+    display: flex;
+    align-items: top 20px;
+    justify-content: center;
+}
+
     
   
