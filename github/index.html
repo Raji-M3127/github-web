@@ -129,11 +129,11 @@
                 <div class="toggle-selection">
                     <div class="toggle-button">
                         <ul>
-                            <li><button><span>Code</span></button></li>
-                            <li><button><span>Plan</span></button></li>
-                            <li><button><span>Colaborate</span></button></li>
-                            <li><button><span>Automate</span></button></li>
-                            <li><button><span>Secure</span></button></li>
+                            <li><button class="togg-button"><span>Code</span></button></li>
+                            <li><button class="togg-button"><span>Plan</span></button></li>
+                            <li><button class="togg-button"><span>Colaborate</span></button></li>
+                            <li><button class="togg-button"><span>Automate</span></button></li>
+                            <li><button class="togg-button"><span>Secure</span></button></li>
                         </ul>
                     </div>
                 </div>
@@ -146,6 +146,64 @@
     </div>
     </div>
     </div>
+
+
+    <script>
+        var autoIndex = 0; // Global index for auto-switching
+
+        function activateTab(tab) {
+          // Update autoIndex based on manually clicked tab
+          const tabs = Array.from(document.querySelectorAll("#features-tabs .feature-tab"));
+          autoIndex = tabs.indexOf(tab);
+          
+          // Remove active state and reset styling for all tabs
+          tabs.forEach(button => {
+            button.classList.remove("active");
+            button.style.boxShadow = "none";
+            button.style.border = "none";
+            button.style.fontWeight = "400";
+          });
+          // Set active state and styling for the clicked tab
+          tab.style.border = "3px solid #f1f1f1";
+          tab.style.fontWeight = "600";
+
+          // Hide all tab content with no fade for start
+          var contents = ["tab-1-content", "tab-2-content", "tab-3-content", "tab-4-content"];
+          contents.forEach(function(id) {
+            var el = document.getElementById(id);
+            el.style.display = "none";
+          });
+
+          // Determine target content ID
+          var targetId;
+          if (tab.innerText.trim() === "Code") {
+            targetId = "tab-1-content";
+          } else if (tab.innerText.trim() === "Plane") {
+            targetId = "tab-2-content";
+          } else if (tab.innerText.trim() === "Colaborate") {
+            targetId = "tab-3-content";
+          } else if (tab.innerText.trim() === "Automate") {
+            targetId = "tab-4-content";
+          }else if (tab.innerText.trim() === "Secure") {
+            targetId = "tab-4-content";
+          }
+          var targetContent = document.getElementById(targetId);
+          // Fade in transition: first set opacity to 0, then display block, then transition to opacity 1.
+          targetContent.style.opacity = 0;
+          targetContent.style.display = "block";
+          targetContent.style.transition = "opacity 0.5s ease-in-out";
+          setTimeout(function() {
+            targetContent.style.opacity = 1;
+          }, 50);
+        }
+        
+        // Auto-switch tabs every 3 seconds
+        setInterval(function(){
+          const tabs = document.querySelectorAll("#features-tabs .feature-tab");
+          autoIndex = (autoIndex + 1) % tabs.length;
+          activateTab(tabs[autoIndex]);
+        }, 3000);
+      </script>
 </body>
 
 </html>
