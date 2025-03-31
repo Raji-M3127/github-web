@@ -124,85 +124,270 @@
 
 
         </div>
-         <div class="hero-courosal-control">
+        <div class="hero-courosal-control">
             <div class="toggle-wrapper">
                 <div class="toggle-selection">
-                    <div class="toggle-button">
+                    <div class="toggle-para-button">
                         <ul>
-                            <li><button class="togg-button"><span>Code</span></button></li>
-                            <li><button class="togg-button"><span>Plan</span></button></li>
-                            <li><button class="togg-button"><span>Colaborate</span></button></li>
-                            <li><button class="togg-button"><span>Automate</span></button></li>
-                            <li><button class="togg-button"><span>Secure</span></button></li>
+                            <li><button class="togg-button" onclick="activatepara(this)"><span>Code</span></button></li>
+                            <li><button class="togg-button" onclick="activatepara(this)"><span>Plan</span></button></li>
+                            <li><button class="togg-button"
+                                    onclick="activatepara(this)"><span>Colaborate</span></button>
+                            </li>
+                            <li><button class="togg-button" onclick="activatepara(this)"><span>Automate</span></button>
+                            </li>
+                            <li><button class="togg-button" onclick="activatepara(this)"><span>Secure</span></button>
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
-            <div class="para" style="color: white;">
-                <p>Build code quickly and securely with Github Copilot embedded throughout your workflow</p>
+            <div class="para-1-content" >
+                <div class="togg" style="color: white">
+                    <p>Build code quickly and securely with Github Copilot embedded throughout your workflow</p>
+                </div>
+            </div>
+            <div class="para-2-content" style="display: none;">
+                <div class="togg" style="color: white">
+                    <p>Track and coordinate your work with GitHub Issues, GitHub Projects, and insights.</p>
+                </div>
             </div>
         </div>
+        <!-- <div id="features-tabs" class="features-tabs"
+                style="width: 100%; height: 93px; border-radius: 10px; background: #fff; border-bottom: 2px solid #f1f1f1; display: flex; justify-content: space-between; align-items: center;">
+                <button class="feature-tab " onclick="activateTab(this)"
+                    style="flex: 1; background: #fff; border: none; padding: 10px 20px; height: 100%; border-radius: 10px; text-align: center; font-weight:600;border:3px solid #f1f1f1 ">
+                    Decentralized Governance
+                </button>
+                <button class="feature-tab" onclick="activateTab(this)"
+                    style="flex: 1; background: #fff; border: none; padding: 10px 20px; height: 100%; border-radius: 10px; box-shadow: none; text-align: center;">
+                    Tokenized Securities
+                </button>
+                <button class="feature-tab" onclick="activateTab(this)"
+                    style="flex: 1; background: #fff; border: none; padding: 10px 20px; height: 100%; border-radius: 10px; box-shadow: none; text-align: center;">
+                    Regulatory Compliance
+                </button>
+                <button class="feature-tab" onclick="activateTab(this)"
+                    style="flex: 1; background: #fff; border: none; padding: 10px 20px; height: 100%; border-radius: 10px; box-shadow: none; text-align: center;">
+                    Smart Contracts
+                </button>
+            </div> -->
     </div>
     </div>
     </div>
-
-
+    </div>
     <script>
         var autoIndex = 0; // Global index for auto-switching
 
         function activateTab(tab) {
-          // Update autoIndex based on manually clicked tab
-          const tabs = Array.from(document.querySelectorAll("#features-tabs .feature-tab"));
-          autoIndex = tabs.indexOf(tab);
-          
-          // Remove active state and reset styling for all tabs
-          tabs.forEach(button => {
-            button.classList.remove("active");
-            button.style.boxShadow = "none";
-            button.style.border = "none";
-            button.style.fontWeight = "400";
-          });
-          // Set active state and styling for the clicked tab
-          tab.style.border = "3px solid #f1f1f1";
-          tab.style.fontWeight = "600";
+            // Update autoIndex based on manually clicked tab
+            const tabs = Array.from(document.querySelectorAll("#toggle-para-button .togg-button"));
+            autoIndex = tabs.indexOf(tab);
 
-          // Hide all tab content with no fade for start
-          var contents = ["tab-1-content", "tab-2-content", "tab-3-content", "tab-4-content"];
-          contents.forEach(function(id) {
-            var el = document.getElementById(id);
-            el.style.display = "none";
-          });
+            // Remove active state and reset styling for all tabs
+            tabs.forEach(button => {
+                button.classList.remove("active");
+                button.style.boxShadow = "none";
+                button.style.border = "none";
+                button.style.fontWeight = "400";
+            });
+            // Set active state and styling for the clicked tab
+            // tab.style.border = "3px solid #f1f1f1";
+            // tab.style.borderRadius = "30px";
+            tab.style.fontWeight = "600";
 
-          // Determine target content ID
-          var targetId;
-          if (tab.innerText.trim() === "Code") {
-            targetId = "tab-1-content";
-          } else if (tab.innerText.trim() === "Plane") {
-            targetId = "tab-2-content";
-          } else if (tab.innerText.trim() === "Colaborate") {
-            targetId = "tab-3-content";
-          } else if (tab.innerText.trim() === "Automate") {
-            targetId = "tab-4-content";
-          }else if (tab.innerText.trim() === "Secure") {
-            targetId = "tab-4-content";
-          }
-          var targetContent = document.getElementById(targetId);
-          // Fade in transition: first set opacity to 0, then display block, then transition to opacity 1.
-          targetContent.style.opacity = 0;
-          targetContent.style.display = "block";
-          targetContent.style.transition = "opacity 0.5s ease-in-out";
-          setTimeout(function() {
-            targetContent.style.opacity = 1;
-          }, 50);
+            // Hide all tab content with no fade for start
+            var contents = ["para-1-content", "para-2-content", "para-3-content", "para-4-content"];
+            contents.forEach(function (id) {
+                var el = document.getElementById(id);
+                el.style.display = "none";
+            });
+
+            // Determine target content ID
+            var targetId;
+            if (para.innerText.trim() === "Code") {
+                targetId = "para-1-content";
+            } else if (para.innerText.trim() === "Plane") {
+                targetId = "para-2-content";
+            } else if (para.innerText.trim() === "Colaborate") {
+                targetId = "para-3-content";
+            } else if (para.innerText.trim() === "Automate") {
+                targetId = "para-4-content";
+            } else if (para.innerText.trim() === "Secure") {
+                targetId = "para-4-content";
+            }
+            var targetContent = document.getElementById(targetId);
+            // Fade in transition: first set opacity to 0, then display block, then transition to opacity 1.
+            targetContent.style.opacity = 0;
+            targetContent.style.display = "block";
+            targetContent.style.transition = "opacity 0.5s ease-in-out";
+            setTimeout(function () {
+                targetContent.style.opacity = 1;
+            }, 50);
         }
-        
-        // Auto-switch tabs every 3 seconds
-        setInterval(function(){
-          const tabs = document.querySelectorAll("#features-tabs .feature-tab");
-          autoIndex = (autoIndex + 1) % tabs.length;
-          activateTab(tabs[autoIndex]);
+
+        // Auto-switch paras every 3 seconds
+        setInterval(function () {
+            const paras = document.querySelectorAll("#features-paras .feature-para");
+            autoIndex = (autoIndex + 1) % paras.length;
+            activatepara(paras[autoIndex]);
         }, 3000);
-      </script>
+    </script>
+    <div style="min-height: 200px;">
+        <!-- Feature para Contents -->
+        <div id="para-1-content">
+            <!-- Feature 1 para section -->
+            <div class="features-grid">
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/images/kry/Frame 70.svg" alt="On-Chain Voting" width="100" />
+                    </div>
+                    <h3 class="feature-title">On-Chain Voting</h3>
+                    <p class="feature-description">
+                        Investors control funding decisions and governance proposals.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/images/kry/Frame 63.svg" alt="Milestone-Based Capital Release" width="50" />
+                    </div>
+                    <h3 class="feature-title">Milestone-Based Capital Release</h3>
+                    <p class="feature-description">
+                        Ensures startups perform before receiving additional funds.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card" style="border-right: none;">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/images/kry/Frame 72.png" alt="No Single Point of Failure" width="60"
+                            height="60" />
+                    </div>
+                    <h3 class="feature-title">No Single Point of Failure</h3>
+                    <p class="feature-description">
+                        Every decision is transparent and community-driven.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Empty Div for Tokenized Securities para -->
+        <div id="para-2-content" style="display: none;">
+            <div class="features-grid">
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Tokenized Securities/Frame 70.svg" alt="On-Chain Voting"
+                            width="100" />
+                    </div>
+                    <h3 class="feature-title">Shares as Digital Tokens</h3>
+                    <p class="feature-description">
+                        Investors hold real-world startup equity as tokens.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Tokenized Securities/Frame 70 (1).svg"
+                            alt="Milestone-Based Capital Release" width="50" />
+                    </div>
+                    <h3 class="feature-title">Instant Trading</h3>
+                    <p class="feature-description">
+                        Investors can sell shares on the Vedic DAO secondary market.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card" style="border-right: none;">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Tokenized Securities/Frame 72.svg" alt="No More Lock-In Periods"
+                            width="60" height="60" />
+                    </div>
+                    <h3 class="feature-title">No More Lock-In Periods</h3>
+                    <p class="feature-description">
+                        Exit investments at any time, unlike traditional PE/VC funds.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Empty Div for Regulatory Compliance para -->
+        <div id="para-3-content" style="display: none;">
+            <div class="features-grid">
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Regulatory Compliance/Frame 72 (1).svg" alt="Legal & SEC-Compliant"
+                            width="100" />
+                    </div>
+                    <h3 class="feature-title">Legal & SEC-Compliant</h3>
+                    <p class="feature-description">
+                        Investments operate under strict security token laws.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Regulatory Compliance/Frame 72 (2).svg"
+                            alt="Bank Account Transactions" width="50" />
+                    </div>
+                    <h3 class="feature-title">Bank Account Transactions</h3>
+                    <p class="feature-description">
+                        Fiat stored in real bank accounts, not crypto wallets.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card" style="border-right: none;">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Regulatory Compliance/Frame 72 (3).svg"
+                            alt="KYC & AML Verification" width="60" height="60" />
+                    </div>
+                    <h3 class="feature-title">KYC & AML Verification</h3>
+                    <p class="feature-description">
+                        Every investor is verified to prevent fraud.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Empty Div for Smart Contracts para -->
+        <div id="para-4-content" style="display: none;">
+            <div class="features-grid">
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Smart Contracts/Frame 72 (4).svg" alt="No Intermediaries"
+                            width="100" />
+                    </div>
+                    <h3 class="feature-title">No Intermediaries</h3>
+                    <p class="feature-description">
+                        Investments happen directly via automated smart contracts.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Smart Contracts/Frame 72 (5).svg" alt="Secure Fund Disbursement"
+                            width="50" />
+                    </div>
+                    <h3 class="feature-title">Secure Fund Disbursement</h3>
+                    <p class="feature-description">
+                        Startups receive funding in tranches, ensuring accounparaility.
+                    </p>
+                </div>
+                <!-- Feature -->
+                <div class="feature-card" style="border-right: none;">
+                    <div class="feature-icon" style="background-color: #fff; border-radius: 10px;">
+                        <img src="assets/keyfeatures/Smart Contracts/Frame 72 (6).svg" alt="Guaranteed Transparency"
+                            width="60" height="60" />
+                    </div>
+                    <h3 class="feature-title">Guaranteed Transparency</h3>
+                    <p class="feature-description">
+                        Transactions cannot be altered or manipulated.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
