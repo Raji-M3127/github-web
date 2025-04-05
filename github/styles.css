@@ -383,32 +383,33 @@ div {
 }
 .hero-courosal-control{
     /* background-color: #090c10; */
-    background-image: linear-gradient(to top,rgb(6, 1, 45)80%,rgb(13, 9, 58),rgb(20, 17, 62));
+    background-image: linear-gradient(to top,rgb(3, 1, 18)85%,rgb(13, 9, 58),rgb(20, 17, 62));
     height:250px ;
-    width: 1580px ;
+    width: 1600px ;
     padding: 32px  24px 0px;
     position: relative;
     display: flex;
     align-items: center;
-    /* margin: 0 auto !important; */
     justify-content: center;
     flex-direction: column;
 }
 .toggle-wrapper{
     align-items:center;
+    top: 15px;
     height: 57px;
     width: 936px;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
     margin: 0 auto !important;
+    position: absolute;
 
 }
 .toggle-selection{
     position :absolute;
-    top: 30px;
-    height: 56px;
-    width: 635px;
+    top: 15px;
+    height: 56px !important;
+    width: 635px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -482,7 +483,7 @@ div {
     border-radius: 40px;
     transition: width 2s linear 1s;
 } */
-.para-contentv{
+.para-content{
     height :112px;
     width: 748x;
     margin-top: 24px ;
@@ -490,7 +491,6 @@ div {
     position: relative;
     align-items: top;
     justify-content: center;
-   
 }
 .para-content p{
     font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -499,6 +499,43 @@ div {
     color: rgb(139, 148, 158) ;
     display: flex;
     text-align: top;
+}
+.slider{
+    position: relative;
+    height: 143px;
+    width: 1648px ;
+    padding: 42px 0px 0px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-color: rgb(3, 1, 18);
+}
+
+.logotrack{
+    height: 100px;
+    width: calc(200px * 20);
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    gap: 50px;
+    animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.logoimg{
+    height: 70px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    
+}
+.logoimg img{
+    height:85px;
+    width:100%;
 }
 
 
