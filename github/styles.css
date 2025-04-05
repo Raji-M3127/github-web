@@ -489,7 +489,7 @@ div {
     margin-top: 24px ;
     display: block;
     position: relative;
-    align-items: top;
+    align-items: center;
     justify-content: center;
 }
 .para-content p{
@@ -498,31 +498,34 @@ div {
    font-weight: 450;
     color: rgb(139, 148, 158) ;
     display: flex;
-    text-align: top;
+    text-align: center;
 }
 .slider{
     position: relative;
     height: 143px;
     width: 1648px ;
-    padding: 42px 0px 0px;
+    padding: 0px 0px 0px;
     display: flex;
     align-items: top;
     justify-content: center;
     background-color: rgb(3, 1, 18);
+    /* overflow: hidden;
+    overflow-x: scroll; */
+    border-bottom: 0.1px solid rgb(50, 49, 49);
 }
 
 .logotrack{
     height: 100px;
-    width: calc(200px * 20);
+    width: calc((150px + 100px) * 20);
     display: flex;
     align-items: top;
     justify-content: center;
-    gap: 50px;
-    animation: scroll 30s linear infinite;
+    gap: 100px;
+    animation: scroll 100s linear infinite;
 }
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-100%); }
 }
 .logoimg{
     height: 70px;
@@ -537,7 +540,31 @@ div {
     height:85px;
     width:100%;
 }
+/* .pausebtn{
+    left: 50px ;
+    height: 20px;
+    width: 20px;
+
+}
+.pausebtn button img{
+    height: 20px;
+    width: 20px;
+  
+} */
+.ipsectionintro{
+    height:1297px ;
+    width: 490px;
+    background-color:rgb(3, 1, 18); ;
+}
 
 
+1297px
+170px
+
+537px
+57px
+
+777px
+100px
     
   
