@@ -552,12 +552,12 @@ div {
   
 } */
 .ipsectionintro{
-    height:1297px ;
-    width: 490px;
-    background-color:rgb(3, 1, 18); ;
+    width:min-width(1520px) ;
+    height: 490px;
+    background-color:rgb(3, 1, 18); 
 }
 
-
+/* 
 1297px
 170px
 
@@ -565,6 +565,6 @@ div {
 57px
 
 777px
-100px
+100px */
     
   
