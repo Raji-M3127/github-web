@@ -550,15 +550,24 @@ svg line {
     width: 20px;
   
 } */
-.ipsectionintro{
+.automation{
     width: 1648px;
-    height: 490px;
+    height: 1807px;
     background-color: rgb(3, 1, 18) !important;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
+}
+.ipsecblock{
+    width:  100% ;
+    height: 842px;
+    top: 0px;
+}
+.ipsecintro{
+    height: 497px;
+    width: 1648px;
+    display: block;
+    align-items: center;
 }
 .primerbrandsec{
     width: 1297px;
@@ -613,22 +622,58 @@ svg line {
 }
 .ipspacer1{
     width: 1648px;
-    height: 140px;
+    min-height: 140px !important;
     background-color: rgb(3, 1, 18) !important;
     
 }
 .ipspacer2{
     width: 1648px;
-    height: 80px;
+    min-height: 80px !important;
     background-color: rgb(3, 1, 18) !important;
     
 }
 
-.ipsec-hero-visual{
+.ipsectionintro.ipsec-hero-visual{
     width :1053px ;
     height : 580px ;
     padding: 48px 56px;
+    position: relative;
+    display: flex;
+    align-items: center;
 
+}
+.ipsectionintro.ipsec-media{
+    width: 950px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ipsechero{
+    height:488px ;
+    width: 1648px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.ipsechero-glow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.ipsechero-glow.glow{
+    position: absolute;
+    left: 20%;
+    width: 787px !important;
+    height: 787px !important;
+    padding: 30% 0;
+    transform: translate(0, -70%) rotate(-45deg);
+    background: radial-gradient(circle at left bottom, #e6b7fe 10%, #5049c2 20%, rgba(87, 78, 255, 0) 60%);
+    filter: blur(40px);
 }
     
   
