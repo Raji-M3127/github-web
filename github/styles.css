@@ -675,5 +675,14 @@ svg line {
     background: radial-gradient(circle at left bottom, #e6b7fe 10%, #5049c2 20%, rgba(87, 78, 255, 0) 60%);
     filter: blur(40px);
 }
+.ipsec-hero-visual{
+    width: 1088px !important;
+    height: 580vh !important;
+}
+
+.ipsec-hero-visual.ipsec-media{
+    width: 452px !important;
+    height: 562vh !important;
+}
     
   
